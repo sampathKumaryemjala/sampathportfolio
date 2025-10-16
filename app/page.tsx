@@ -7,7 +7,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-white">YourBrand</div>
+          <div className="text-2xl font-bold text-white">SampathYemjala</div>
           <div className="hidden md:flex items-center gap-8">
             <Link href="/features" className="text-gray-300 hover:text-white transition-colors">
               Features
@@ -20,6 +20,9 @@ export default function Home() {
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
+            </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
+              Blog
             </Link>
           </div>
           <Link
