@@ -43,8 +43,8 @@ export default function ContactPage() {
         {
             icon: '📧',
             title: 'Email',
-            value: 'sampath@example.com',
-            link: 'mailto:sampath@example.com',
+            value: 'sampath@gmail.com.com',
+            link: 'mailto:sampath@gmail.com.com',
         },
         {
             icon: '📱',
@@ -143,7 +143,7 @@ export default function ContactPage() {
                                             onChange={handleChange}
                                             required
                                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 transition-colors"
-                                            placeholder="your.email@example.com"
+                                                placeholder="your.email@example.com"
                                         />
                                     </div>
 
