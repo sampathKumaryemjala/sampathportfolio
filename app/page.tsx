@@ -1,102 +1,118 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Navigation */}
+      <nav className="container mx-auto px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="text-2xl font-bold text-white">YourBrand</div>
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/features" className="text-gray-300 hover:text-white transition-colors">
+              Features
+            </Link>
+            <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
+              Pricing
+            </Link>
+            <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+          </div>
+          <Link
+            href="/login"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors font-medium"
+          >
+            Sign In
+          </Link>
+        </div>
+      </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <main className="container mx-auto px-6 pt-20 pb-32">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Build Something{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Amazing
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+            Create stunning experiences with our powerful platform.
+            Fast, reliable, and designed for modern developers.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/portfolio"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
+            >
+              Get Started Free
+            </Link>
+            <Link
+              href="/portfolio"
+              className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold backdrop-blur-sm border border-white/20 transition-all"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mt-32">
+          <Link href="/features/speed" className="group">
+            <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-3">Lightning Fast</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Optimized performance for the best user experience possible.
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/features/security" className="group">
+            <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-2xl font-bold text-white mb-3">Secure by Default</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Enterprise-grade security built into every layer of our platform.
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/features/scale" className="group">
+            <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all hover:transform hover:scale-105">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold text-white mb-3">Scales Effortlessly</h3>
+              <p className="text-gray-400 leading-relaxed">
+                From startup to enterprise, we grow with your business needs.
+              </p>
+            </div>
+          </Link>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="container mx-auto px-6 py-12 border-t border-white/10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-gray-400 text-center md:text-left">
+            © 2025 YourBrand. All rights reserved.
+          </div>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+              Terms
+            </Link>
+            <Link href="/docs" className="text-gray-400 hover:text-white transition-colors">
+              Docs
+            </Link>
+          </div>
+        </div>
       </footer>
     </div>
   );
