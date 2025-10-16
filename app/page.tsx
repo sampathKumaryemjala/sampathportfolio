@@ -24,6 +24,9 @@ export default function Home() {
             <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
               Blog
             </Link>
+            <Link href="/portfolio" className="text-gray-300 hover:text-white transition-colors">
+              Portfolio
+            </Link>
           </div>
           <Link
             href="/login"
