@@ -41,7 +41,8 @@ export const Footer = () => {
 
                     <div>
                         <h4 className="font-semibold mb-4">Contact</h4>
-                        <p className="text-gray-400">sampath@example.com</p>
+                        <p className="text-gray-400">sampathyemjala@gmail</p>
+                        <p className="text-gray-400">7729827183</p>
                         <p className="text-gray-400">Hyderabad, India</p>
                     </div>
                 </div>

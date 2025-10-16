@@ -459,7 +459,7 @@ export default function Portfolio() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
                         <a
-                            href="mailto:sampathyemjala@example.com"
+                            href="mailto:sampathyemjala@gmail.com"
                             className="group flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 px-8 py-4 rounded-xl transition-all duration-300 border border-slate-700 hover:border-transparent hover:scale-105 shadow-lg hover:shadow-cyan-500/30"
                             aria-label="Email"
                         >
