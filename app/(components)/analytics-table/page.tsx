@@ -43,13 +43,13 @@ export default function AnalyticsTablePage() {
         const postsByUser = new Map<number, number>();
         const commentsByUser = new Map<number, number>();
 
-        postsRes.data.forEach((post: any) => {
+        postsRes.data.forEach((post: { userId: number; id: number }) => {
           postsByUser.set(post.userId, (postsByUser.get(post.userId) || 0) + 1);
         });
 
-        commentsRes.data.forEach((comment: any) => {
+        commentsRes.data.forEach((comment: { postId: number }) => {
           const postId = comment.postId;
-          const post = postsRes.data.find((p: any) => p.id === postId);
+          const post = postsRes.data.find((p: { id: number; userId: number }) => p.id === postId);
           if (post) {
             commentsByUser.set(post.userId, (commentsByUser.get(post.userId) || 0) + 1);
           }

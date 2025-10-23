@@ -11,7 +11,7 @@ interface CommonHeaderProps {
   backLink?: string;
 }
 
-export function CommonHeader({ title, description, icon, backLink = '/': CommonHeaderProps) {
+export function CommonHeader({ title, description, icon, backLink = '/' }: CommonHeaderProps) {
   return (
     <div className="shadow-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40 backdrop-blur-sm bg-white/95 dark:bg-gray-800/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

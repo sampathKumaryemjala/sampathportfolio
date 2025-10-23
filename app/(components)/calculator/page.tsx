@@ -200,6 +200,11 @@ export default function CalculatorPage() {
   } = useCalculator();
 
   const [showHistory, setShowHistory] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Keyboard support
   useEffect(() => {
@@ -340,7 +345,7 @@ export default function CalculatorPage() {
 
           {/* History Panel */}
           <AnimatePresence>
-            {(showHistory || window.innerWidth >= 1024) && (
+            {(showHistory || (isMounted && window.innerWidth >= 1024)) && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}

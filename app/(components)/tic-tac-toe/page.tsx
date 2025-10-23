@@ -256,7 +256,7 @@ export default function TicTacToePage() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   className="text-2xl font-bold text-gray-600 dark:text-gray-400"
                 >
-                  🤝 It's a Draw! 🤝
+                  🤝 It&apos;s a Draw! 🤝
                 </motion.div>
               ) : (
                 <motion.div
