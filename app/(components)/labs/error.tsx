@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { Layout } from '@/app/reusableComponents/layout/Layout';
 
 export default function Error({
@@ -32,12 +33,12 @@ export default function Error({
             >
               Try Again
             </button>
-            <a
+            <Link
               href="/"
-              className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-semibold transition-all"
+              className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-semibold transition-all inline-block"
             >
               Go Home
-            </a>
+            </Link>
           </div>
         </div>
       </section>
