@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import { Layout } from '@/app/reusableComponents/layout/Layout';
+import { BackButton } from '@/app/reusableComponents/ui';
 import {
   Table,
   TableBody,
@@ -67,63 +69,79 @@ export default function UsersTablePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="animate-pulse">
-            <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded w-64 mb-8"></div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6">
-              <div className="space-y-4">
-                {[...Array(5)].map((_, i) => (
-                  <div key={i} className="h-16 bg-gray-100 dark:bg-gray-700 rounded"></div>
-                ))}
+      <Layout>
+        <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-6">
+              <BackButton />
+            </div>
+            <div className="animate-pulse">
+              <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded w-64 mb-8"></div>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6">
+                <div className="space-y-4">
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="h-16 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </Layout>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 flex items-center justify-center py-12 px-4">
-        <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
-          <div className="text-red-500 mb-4">
-            <svg className="mx-auto h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+      <Layout>
+        <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 flex items-center justify-center py-12 px-4">
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
+            <div className="text-red-500 mb-4">
+              <svg className="mx-auto h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              Error Loading Users
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">{error}</p>
+            <div className="flex gap-3 justify-center flex-wrap">
+              <BackButton />
+              <button
+                onClick={() => window.location.reload()}
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+              >
+                Retry
+              </button>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-            Error Loading Users
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">{error}</p>
-          <button
-            onClick={() => window.location.reload()}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-          >
-            Retry
-          </button>
-        </div>
-      </div>
+        </section>
+      </Layout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
-        >
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
-            👥 Users Directory
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            Browse all users from JSONPlaceholder API
-          </p>
-        </motion.div>
+    <Layout>
+      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Back Button */}
+          <div className="mb-6">
+            <BackButton />
+          </div>
+
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8"
+          >
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+              👥 Users Directory
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Browse all users from JSONPlaceholder API
+            </p>
+          </motion.div>
 
         {/* Stats Card */}
         <motion.div
@@ -219,7 +237,8 @@ export default function UsersTablePage() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
+    </Layout>
   );
 }
 

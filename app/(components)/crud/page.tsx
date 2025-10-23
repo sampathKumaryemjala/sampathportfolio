@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { Layout } from '@/app/reusableComponents/layout/Layout';
+import { BackButton } from '@/app/reusableComponents/ui';
 
 interface Record {
   id: string;
@@ -115,17 +117,23 @@ export default function CrudPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
-            CRUD Manager
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            Create, Read, Update, and Delete records with localStorage persistence
-          </p>
-        </div>
+    <Layout>
+      <section className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Back Button */}
+          <div className="mb-6">
+            <BackButton />
+          </div>
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+              CRUD Manager
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Create, Read, Update, and Delete records with localStorage persistence
+            </p>
+          </div>
 
         {/* Form Section */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
@@ -314,7 +322,8 @@ export default function CrudPage() {
           )}
         </div>
       </div>
-    </div>
+    </section>
+    </Layout>
   );
 }
 

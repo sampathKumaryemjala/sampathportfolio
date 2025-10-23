@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Layout } from '@/app/reusableComponents/layout/Layout';
+import { BackButton } from '@/app/reusableComponents/ui';
 
 // Types
 type Player = 'X' | 'O' | null;
@@ -186,21 +188,27 @@ export default function TicTacToePage() {
   const [showModeSelector, setShowModeSelector] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-3">
-            Tic-Tac-Toe
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            {gameMode === 'ai' ? 'Play against AI' : 'Two Player Mode'}
-          </p>
-        </motion.div>
+    <Layout>
+      <section className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          {/* Back Button */}
+          <div className="mb-6">
+            <BackButton />
+          </div>
+
+          {/* Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-8"
+          >
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-3">
+              Tic-Tac-Toe
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              {gameMode === 'ai' ? 'Play against AI' : 'Two Player Mode'}
+            </p>
+          </motion.div>
 
         {/* Scoreboard */}
         <motion.div 
@@ -385,7 +393,8 @@ export default function TicTacToePage() {
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </section>
+    </Layout>
   );
 }
 
