@@ -1,14 +1,18 @@
 "use client"
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ShoppingCart, Heart } from 'lucide-react';
 import { ThemeToggle } from '@/app/reusableComponents/ui/ThemeToggle';
 import { navigationConfig, isDropdown, primaryCTA } from '@/config/navigation';
+import { useCart } from '@/app/providers/CartProvider';
+import { useWishlist } from '@/app/providers/WishlistProvider';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const { getTotalItems } = useCart();
+    const { wishlist } = useWishlist();
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -87,6 +91,25 @@ export const Navbar = () => {
                             </Link>
                             );
                         })}
+                        
+                        {/* Cart and Wishlist Icons */}
+                        <Link href="/wishlist" className="relative text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <Heart className="w-6 h-6" />
+                            {wishlist.length > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                                    {wishlist.length}
+                                </span>
+                            )}
+                        </Link>
+                        <Link href="/cart" className="relative text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <ShoppingCart className="w-6 h-6" />
+                            {getTotalItems() > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                                    {getTotalItems()}
+                                </span>
+                            )}
+                        </Link>
+                        
                         <ThemeToggle />
                         <Link
                             href={primaryCTA.href}
@@ -98,6 +121,22 @@ export const Navbar = () => {
 
                     {/* Mobile Menu Button and Theme Toggle */}
                     <div className="lg:hidden flex items-center gap-3">
+                        <Link href="/wishlist" className="relative text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <Heart className="w-5 h-5" />
+                            {wishlist.length > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">
+                                    {wishlist.length}
+                                </span>
+                            )}
+                        </Link>
+                        <Link href="/cart" className="relative text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <ShoppingCart className="w-5 h-5" />
+                            {getTotalItems() > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">
+                                    {getTotalItems()}
+                                </span>
+                            )}
+                        </Link>
                         <ThemeToggle />
                         <button
                             className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors p-2"

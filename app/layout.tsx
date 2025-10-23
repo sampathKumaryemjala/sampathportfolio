@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { SessionProvider } from '@/components/SessionProvider'
 import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { CartProvider } from '@/app/providers/CartProvider'
+import { WishlistProvider } from '@/app/providers/WishlistProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,7 +52,11 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200`} suppressHydrationWarning>
         <ThemeProvider>
           <SessionProvider>
-            {children}
+            <CartProvider>
+              <WishlistProvider>
+                {children}
+              </WishlistProvider>
+            </CartProvider>
           </SessionProvider>
         </ThemeProvider>
       </body>

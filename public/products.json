@@ -1,0 +1,147 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Premium Wireless Headphones",
+    "description": "High-quality wireless headphones with active noise cancellation and 30-hour battery life. Premium sound quality with deep bass and crystal-clear highs.",
+    "price": 299.99,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    "category": "Electronics",
+    "stock": 50,
+    "rating": 4.8,
+    "reviews": 256,
+    "features": ["Active Noise Cancellation", "30-hour Battery", "Bluetooth 5.0", "Premium Sound Quality"]
+  },
+  {
+    "id": "prod_002",
+    "name": "Smart Watch Pro",
+    "description": "Advanced fitness tracking, heart rate monitoring, and smartphone notifications. Water-resistant with a vibrant AMOLED display.",
+    "price": 399.99,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    "category": "Electronics",
+    "stock": 35,
+    "rating": 4.6,
+    "reviews": 189,
+    "features": ["Fitness Tracking", "Heart Rate Monitor", "Water Resistant", "AMOLED Display"]
+  },
+  {
+    "id": "prod_003",
+    "name": "Minimalist Backpack",
+    "description": "Sleek, durable backpack perfect for daily commutes or weekend adventures. Multiple compartments with padded laptop sleeve.",
+    "price": 89.99,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "category": "Accessories",
+    "stock": 100,
+    "rating": 4.7,
+    "reviews": 412,
+    "features": ["Laptop Sleeve", "Water Resistant", "Multiple Compartments", "Ergonomic Design"]
+  },
+  {
+    "id": "prod_004",
+    "name": "Mechanical Keyboard RGB",
+    "description": "Premium mechanical keyboard with customizable RGB lighting and tactile switches. Perfect for gaming and productivity.",
+    "price": 149.99,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&h=500&fit=crop",
+    "category": "Electronics",
+    "stock": 45,
+    "rating": 4.9,
+    "reviews": 324,
+    "features": ["RGB Lighting", "Mechanical Switches", "Programmable Keys", "Aluminum Frame"]
+  },
+  {
+    "id": "prod_005",
+    "name": "Leather Wallet",
+    "description": "Handcrafted genuine leather wallet with RFID protection. Slim design with multiple card slots and bill compartment.",
+    "price": 49.99,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop",
+    "category": "Accessories",
+    "stock": 80,
+    "rating": 4.5,
+    "reviews": 178,
+    "features": ["Genuine Leather", "RFID Protection", "Slim Design", "Multiple Slots"]
+  },
+  {
+    "id": "prod_006",
+    "name": "Portable Speaker",
+    "description": "Waterproof Bluetooth speaker with 360-degree sound and 12-hour battery. Perfect for outdoor adventures.",
+    "price": 79.99,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=500&fit=crop",
+    "category": "Electronics",
+    "stock": 60,
+    "rating": 4.6,
+    "reviews": 267,
+    "features": ["Waterproof", "360° Sound", "12-hour Battery", "Bluetooth 5.0"]
+  },
+  {
+    "id": "prod_007",
+    "name": "Sunglasses Classic",
+    "description": "Polarized sunglasses with UV400 protection. Stylish design suitable for any occasion.",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    "category": "Accessories",
+    "stock": 90,
+    "rating": 4.4,
+    "reviews": 145,
+    "features": ["Polarized Lenses", "UV400 Protection", "Scratch Resistant", "Stylish Design"]
+  },
+  {
+    "id": "prod_008",
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with precision tracking and rechargeable battery. Silent clicks for quiet environments.",
+    "price": 39.99,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "category": "Electronics",
+    "stock": 120,
+    "rating": 4.7,
+    "reviews": 389,
+    "features": ["Ergonomic Design", "Silent Clicks", "Rechargeable", "Precision Tracking"]
+  },
+  {
+    "id": "prod_009",
+    "name": "Travel Mug",
+    "description": "Insulated stainless steel travel mug that keeps drinks hot for 6 hours or cold for 12 hours. Leak-proof lid.",
+    "price": 24.99,
+    "image": "https://images.unsplash.com/photo-1534256441481-91b7bf21fb1c?w=500&h=500&fit=crop",
+    "category": "Accessories",
+    "stock": 150,
+    "rating": 4.8,
+    "reviews": 523,
+    "features": ["Insulated", "Leak Proof", "BPA Free", "Easy Clean"]
+  },
+  {
+    "id": "prod_010",
+    "name": "USB-C Hub",
+    "description": "Multi-port USB-C hub with HDMI, USB 3.0, and SD card reader. Compact design for on-the-go productivity.",
+    "price": 59.99,
+    "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+    "category": "Electronics",
+    "stock": 75,
+    "rating": 4.5,
+    "reviews": 234,
+    "features": ["Multi-Port", "HDMI Support", "USB 3.0", "Compact Design"]
+  },
+  {
+    "id": "prod_011",
+    "name": "Yoga Mat Premium",
+    "description": "Extra thick non-slip yoga mat with carrying strap. Eco-friendly materials for comfortable practice.",
+    "price": 34.99,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&h=500&fit=crop",
+    "category": "Fitness",
+    "stock": 95,
+    "rating": 4.6,
+    "reviews": 298,
+    "features": ["Non-Slip", "Eco-Friendly", "Extra Thick", "Carrying Strap"]
+  },
+  {
+    "id": "prod_012",
+    "name": "Phone Stand Adjustable",
+    "description": "Sturdy aluminum phone stand with adjustable angles. Compatible with all smartphones and tablets.",
+    "price": 19.99,
+    "image": "https://images.unsplash.com/photo-1587226499223-eea6df985544?w=500&h=500&fit=crop",
+    "category": "Accessories",
+    "stock": 200,
+    "rating": 4.7,
+    "reviews": 567,
+    "features": ["Adjustable Angle", "Aluminum Build", "Non-Slip Base", "Universal Fit"]
+  }
+]
+
