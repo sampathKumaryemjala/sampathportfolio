@@ -72,6 +72,60 @@ export const navigationConfig: NavItem[] = [
         description: 'Random inspirational quotes',
         icon: '💭'
       },
+      {
+        href: '/comments-table',
+        label: 'Comments Search',
+        description: 'Search comments by name or email',
+        icon: '💬'
+      },
+      {
+        href: '/paginated-users',
+        label: 'Paginated Users',
+        description: '5 users per page navigation',
+        icon: '👤'
+      },
+      {
+        href: '/nested-users-posts',
+        label: 'Nested Table',
+        description: 'Expandable user posts view',
+        icon: '📊'
+      },
+      {
+        href: '/editable-todos',
+        label: 'Editable Todos',
+        description: 'Inline editing with PUT requests',
+        icon: '✏️'
+      },
+      {
+        href: '/searchable-posts',
+        label: 'Searchable Posts',
+        description: 'Live search posts table',
+        icon: '🔍'
+      },
+      {
+        href: '/todos-summary',
+        label: 'Todos Summary',
+        description: 'Per-user todos analytics',
+        icon: '📊'
+      },
+      {
+        href: '/analytics-table',
+        label: 'Combined Analytics',
+        description: 'User activity metrics',
+        icon: '📈'
+      },
+      {
+        href: '/weather-table',
+        label: 'Weather Data',
+        description: 'Live weather for cities',
+        icon: '🌤️'
+      },
+      {
+        href: '/api-status',
+        label: 'API Status',
+        description: 'Real-time API monitoring',
+        icon: '🚦'
+      },
       // 🚀 Add more project ideas here as you build them:
       // Uncomment and modify these templates, or create your own!
       
