@@ -29,12 +29,12 @@ export function ErrorDisplay({
     const displayMessage = message || error.message || 'An unexpected error occurred. Please try again.';
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 p-4">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 dark:from-gray-900 dark:to-gray-800 p-4">
             <div className="max-w-lg w-full">
-                <div className="bg-white rounded-xl shadow-xl p-8 text-center">
-                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl dark:shadow-gray-900/50 p-8 text-center">
+                    <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg
-                            className="w-8 h-8 text-red-600"
+                            className="w-8 h-8 text-red-600 dark:text-red-400"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -47,8 +47,8 @@ export function ErrorDisplay({
                             />
                         </svg>
                     </div>
-                    <h1 className="text-2xl font-bold text-gray-900 mb-2">{title}</h1>
-                    <p className="text-gray-600 mb-6 text-sm">{displayMessage}</p>
+                    <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">{title}</h1>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm">{displayMessage}</p>
                     <div className="space-y-3">
                         <button
                             onClick={() => reset()}
@@ -59,7 +59,7 @@ export function ErrorDisplay({
                         {backLink && (
                             <Link
                                 href={backLink}
-                                className="block w-full bg-purple-100 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-200 transition-all"
+                                className="block w-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all"
                             >
                                 {backLinkText}
                             </Link>
@@ -67,7 +67,7 @@ export function ErrorDisplay({
                         {showHomeLink && (
                             <Link
                                 href="/"
-                                className="block w-full bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all"
+                                className="block w-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
                             >
                                 Go Home
                             </Link>

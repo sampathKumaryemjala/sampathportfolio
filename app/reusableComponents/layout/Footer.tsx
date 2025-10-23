@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white">
+        <footer className="bg-gray-900 dark:bg-gray-950 text-white transition-colors duration-200">
             <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                     <div className="sm:col-span-2 lg:col-span-1">
@@ -55,7 +55,7 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8">
+                <div className="border-t border-gray-800 dark:border-gray-900 mt-6 sm:mt-8 pt-6 sm:pt-8">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                         <p className="text-sm sm:text-base text-gray-400">© 2025 Sampath Kumar. All rights reserved.</p>
                         <div className="flex gap-4 sm:gap-6">

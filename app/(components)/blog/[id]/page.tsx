@@ -22,13 +22,13 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     if (!post) {
         return (
             <Layout>
-                <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12 sm:py-16 lg:py-20">
+                <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-12 sm:py-16 lg:py-20">
                     <div className="container mx-auto px-4 sm:px-6 text-center">
-                        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-                        <p className="text-lg text-gray-600 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
+                        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Post Not Found</h1>
+                        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4" />
                             Back to Blog
@@ -41,13 +41,13 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
     return (
         <Layout>
-            <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-8 sm:py-12 lg:py-16">
+            <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-8 sm:py-12 lg:py-16">
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="max-w-4xl mx-auto">
                         {/* Back Button */}
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 mb-6 sm:mb-8 transition-colors"
+                            className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 mb-6 sm:mb-8 transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4" />
                             <span className="text-sm sm:text-base">Back to Blog</span>
@@ -58,7 +58,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                             <div className="p-6 sm:p-8">
                                 <div className="flex items-center gap-2 mb-4 flex-wrap">
                                     <Badge>{post.category}</Badge>
-                                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                                    <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                                         <div className="flex items-center gap-1">
                                             <User className="w-4 h-4" />
                                             <span>{post.author}</span>
@@ -74,17 +74,17 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                                     </div>
                                 </div>
 
-                                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
                                     {post.title}
                                 </h1>
 
-                                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
+                                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6 sm:mb-8">
                                     {post.excerpt}
                                 </p>
 
                                 <div className="flex flex-wrap gap-2">
                                     {post.tags.map((tag) => (
-                                        <span key={tag} className="text-xs sm:text-sm bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
+                                        <span key={tag} className="text-xs sm:text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full">
                                             #{tag}
                                         </span>
                                     ))}

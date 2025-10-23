@@ -115,18 +115,18 @@ export default function TermsOfServicePage() {
                 </div>
             </section>
 
-            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="max-w-5xl mx-auto">
-                        <Card className="mb-8 bg-purple-50 border-purple-200">
+                        <Card className="mb-8 bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800">
                             <div className="p-6 sm:p-8">
                                 <div className="flex items-start gap-4">
-                                    <AlertTriangle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                                    <AlertTriangle className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
                                             Important Notice
                                         </h3>
-                                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                                        <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                                             These Terms of Service constitute a legally binding agreement between you and Sampath Portfolio. By accessing or using our website, you acknowledge that you have read, understood, and agree to be bound by these terms. If you do not agree, please discontinue use of our website immediately.
                                         </p>
                                     </div>
@@ -144,15 +144,15 @@ export default function TermsOfServicePage() {
                                                 <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg p-3 flex-shrink-0">
                                                     <Icon className="w-6 h-6 text-white" />
                                                 </div>
-                                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-2">
+                                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mt-2">
                                                     {section.title}
                                                 </h2>
                                             </div>
                                             <ul className="space-y-3 ml-0 sm:ml-16">
                                                 {section.content.map((item, idx) => (
                                                     <li key={idx} className="flex items-start gap-3">
-                                                        <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0" />
-                                                        <span className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                                                        <div className="w-2 h-2 bg-indigo-600 dark:bg-indigo-400 rounded-full mt-2 flex-shrink-0" />
+                                                        <span className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                                                             {item}
                                                         </span>
                                                     </li>
@@ -164,29 +164,29 @@ export default function TermsOfServicePage() {
                             })}
                         </div>
 
-                        <Card className="bg-gradient-to-r from-indigo-50 to-purple-50 border-indigo-200">
+                        <Card className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border-indigo-200 dark:border-indigo-800">
                             <div className="p-6 sm:p-8">
                                 <div className="flex items-start gap-4">
-                                    <FileText className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                                    <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                                             Questions About Terms?
                                         </h3>
-                                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                                        <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                             If you have any questions about these Terms of Service, please contact us:
                                         </p>
                                         <div className="space-y-2">
-                                            <p className="text-indigo-700 font-semibold">Email: sampathyemjala@gmail.com</p>
-                                            <p className="text-gray-600 text-sm sm:text-base">Phone: +91 7729827183</p>
-                                            <p className="text-gray-600 text-sm sm:text-base">Location: Hyderabad, India</p>
+                                            <p className="text-indigo-700 dark:text-indigo-400 font-semibold">Email: sampathyemjala@gmail.com</p>
+                                            <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Phone: +91 7729827183</p>
+                                            <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Location: Hyderabad, India</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </Card>
 
-                        <div className="mt-8 p-4 sm:p-6 bg-gray-100 rounded-lg">
-                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        <div className="mt-8 p-4 sm:p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                                 <strong>Changes to Terms:</strong> We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to the website. Your continued use of the website following the posting of changes constitutes your acceptance of such changes. We recommend that you review these terms periodically for any updates.
                             </p>
                         </div>

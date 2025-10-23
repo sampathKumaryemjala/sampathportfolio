@@ -23,23 +23,23 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
                 <div className="p-4 sm:p-6">
                     <div className="flex items-center gap-2 mb-3 flex-wrap">
                         <Badge size="sm">{post.category}</Badge>
-                        <span className="text-xs sm:text-sm text-gray-500">{post.readTime}</span>
+                        <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900 hover:text-purple-600 transition-colors line-clamp-2">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors line-clamp-2">
                         {post.title}
                     </h3>
 
-                    <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
 
-                    <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500 mb-3">
+                    <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-3">
                         <span>{post.author}</span>
                         <span>{new Date(post.date).toLocaleDateString()}</span>
                     </div>
 
                     <div className="flex flex-wrap gap-1 sm:gap-2">
                         {post.tags.map((tag) => (
-                            <span key={tag} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                            <span key={tag} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded">
                                 #{tag}
                             </span>
                         ))}
