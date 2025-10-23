@@ -4,4 +4,5 @@ export { Badge } from './Badge';
 export { LoadingSpinner } from './LoadingSpinner';
 export { ErrorDisplay } from './ErrorDisplay';
 export { PageSkeleton } from './PageSkeleton';
+export { ThemeToggle } from './ThemeToggle';
 
