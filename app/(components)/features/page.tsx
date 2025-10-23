@@ -71,7 +71,7 @@ export default function FeaturesPage() {
                 </div>
             </section>
 
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50 dark:bg-gray-900">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {features.map((feature, index) => (
@@ -80,10 +80,10 @@ export default function FeaturesPage() {
                                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-3xl mb-4 shadow-lg`}>
                                         {feature.icon}
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                                    <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                                         {feature.description}
                                     </p>
                                 </div>

@@ -60,27 +60,27 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="py-12 sm:py-16 lg:py-20 bg-white">
+            <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
                         {stats.map((stat, index) => (
                             <div key={index} className="text-center">
-                                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-600 mb-2">
+                                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2">
                                     {stat.number}
                                 </div>
-                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg">{stat.label}</div>
+                                <div className="text-gray-600 dark:text-gray-300 text-sm sm:text-base lg:text-lg">{stat.label}</div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                         <div>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Hi, I am Sampath Kumar</h2>
-                            <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 dark:text-white">Hi, I am Sampath Kumar</h2>
+                            <div className="space-y-3 sm:space-y-4 text-gray-700 dark:text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
                                 <p>
                                     I am a passionate Full-Stack Developer based in Hyderabad, India, with over 5 years of experience building web applications that make a difference.
                                 </p>
@@ -111,19 +111,19 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="py-20 bg-white">
+            <section className="py-20 bg-white dark:bg-gray-900">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold text-center mb-12">Technical Skills</h2>
+                        <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">Technical Skills</h2>
 
                         <div className="space-y-6">
                             {skills.map((skill, index) => (
                                 <div key={index}>
                                     <div className="flex justify-between mb-2">
-                                        <span className="text-lg font-semibold text-gray-800">{skill.name}</span>
-                                        <span className="text-purple-600 font-bold">{skill.level}%</span>
+                                        <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">{skill.name}</span>
+                                        <span className="text-purple-600 dark:text-purple-400 font-bold">{skill.level}%</span>
                                     </div>
-                                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
                                         <div
                                             className="bg-gradient-to-r from-purple-600 to-blue-600 h-full rounded-full transition-all duration-1000"
                                             style={{ width: `${skill.level}%` }}
@@ -136,26 +136,26 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50 dark:bg-gray-800">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold text-center mb-12">My Journey</h2>
+                        <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">My Journey</h2>
 
                         <div className="relative">
-                            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-purple-200" />
+                            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-purple-200 dark:bg-purple-800" />
 
                             <div className="space-y-12">
                                 {timeline.map((item, index) => (
                                     <div key={index} className="relative">
                                         <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                                            <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow-lg" />
+                                            <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-600 dark:bg-purple-400 rounded-full border-4 border-white dark:border-gray-800 shadow-lg" />
 
                                             <Card className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
                                                 <div className="p-6">
-                                                    <div className="text-purple-600 font-bold text-lg mb-2">{item.year}</div>
-                                                    <h3 className="text-xl font-bold mb-1 text-gray-900">{item.title}</h3>
-                                                    <div className="text-gray-600 mb-2">{item.company}</div>
-                                                    <p className="text-gray-700">{item.description}</p>
+                                                    <div className="text-purple-600 dark:text-purple-400 font-bold text-lg mb-2">{item.year}</div>
+                                                    <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{item.title}</h3>
+                                                    <div className="text-gray-600 dark:text-gray-400 mb-2">{item.company}</div>
+                                                    <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
                                                 </div>
                                             </Card>
                                         </div>

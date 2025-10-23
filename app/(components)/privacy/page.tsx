@@ -95,18 +95,18 @@ export default function PrivacyPolicyPage() {
                 </div>
             </section>
 
-            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="max-w-5xl mx-auto">
-                        <Card className="mb-8 bg-blue-50 border-blue-200">
+                        <Card className="mb-8 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
                             <div className="p-6 sm:p-8">
                                 <div className="flex items-start gap-4">
-                                    <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                                    <AlertCircle className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
                                             Introduction
                                         </h3>
-                                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                                        <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                                             At Sampath Portfolio, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
                                         </p>
                                     </div>
@@ -124,15 +124,15 @@ export default function PrivacyPolicyPage() {
                                                 <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg p-3 flex-shrink-0">
                                                     <Icon className="w-6 h-6 text-white" />
                                                 </div>
-                                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-2">
+                                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mt-2">
                                                     {section.title}
                                                 </h2>
                                             </div>
                                             <ul className="space-y-3 ml-0 sm:ml-16">
                                                 {section.content.map((item, idx) => (
                                                     <li key={idx} className="flex items-start gap-3">
-                                                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0" />
-                                                        <span className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                                                        <div className="w-2 h-2 bg-purple-600 dark:bg-purple-400 rounded-full mt-2 flex-shrink-0" />
+                                                        <span className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                                                             {item}
                                                         </span>
                                                     </li>
@@ -144,29 +144,29 @@ export default function PrivacyPolicyPage() {
                             })}
                         </div>
 
-                        <Card className="bg-gradient-to-r from-purple-50 to-blue-50 border-purple-200">
+                        <Card className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border-purple-200 dark:border-purple-800">
                             <div className="p-6 sm:p-8">
                                 <div className="flex items-start gap-4">
-                                    <Mail className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                                    <Mail className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                                             Contact Us
                                         </h3>
-                                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                                        <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                             If you have any questions or concerns about this Privacy Policy, please contact us at:
                                         </p>
                                         <div className="space-y-2">
-                                            <p className="text-purple-700 font-semibold">Email: sampathyemjala@gmail.com</p>
-                                            <p className="text-gray-600 text-sm sm:text-base">Phone: +91 7729827183</p>
-                                            <p className="text-gray-600 text-sm sm:text-base">Location: Hyderabad, India</p>
+                                            <p className="text-purple-700 dark:text-purple-400 font-semibold">Email: sampathyemjala@gmail.com</p>
+                                            <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Phone: +91 7729827183</p>
+                                            <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Location: Hyderabad, India</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </Card>
 
-                        <div className="mt-8 p-4 sm:p-6 bg-gray-100 rounded-lg">
-                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        <div className="mt-8 p-4 sm:p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                                 <strong>Note:</strong> We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the &quot;Last updated&quot; date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
                             </p>
                         </div>
