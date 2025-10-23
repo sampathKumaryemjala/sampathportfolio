@@ -48,6 +48,30 @@ export const navigationConfig: NavItem[] = [
         description: 'Advanced calculator with history',
         icon: '🧮'
       },
+      {
+        href: '/users-table',
+        label: 'Users Table',
+        description: 'Browse users with sorting',
+        icon: '👥'
+      },
+      {
+        href: '/posts-table',
+        label: 'Posts Table',
+        description: 'View posts with pagination',
+        icon: '📄'
+      },
+      {
+        href: '/todos-table',
+        label: 'Todos Table',
+        description: 'Filter completed/pending todos',
+        icon: '✅'
+      },
+      {
+        href: '/quotes-table',
+        label: 'Quotes Table',
+        description: 'Random inspirational quotes',
+        icon: '💭'
+      },
       // 🚀 Add more project ideas here as you build them:
       // Uncomment and modify these templates, or create your own!
       
