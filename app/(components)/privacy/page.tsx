@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
 
                         <div className="mt-8 p-4 sm:p-6 bg-gray-100 rounded-lg">
                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                                <strong>Note:</strong> We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Last updated" date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
+                                <strong>Note:</strong> We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the &quot;Last updated&quot; date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
                             </p>
                         </div>
                     </div>
