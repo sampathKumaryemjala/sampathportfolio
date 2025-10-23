@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { CheckCircle, Package, ArrowRight, XCircle, Loader2 } from 'lucide-react';
 import { Layout } from '@/app/reusableComponents/layout/Layout';
 import { useCart } from '@/app/providers/CartProvider';
 
-export default function CheckoutSuccessPage() {
+function SuccessPageContent() {
   const searchParams = useSearchParams();
   const { clearCart } = useCart();
   
@@ -170,3 +170,21 @@ export default function CheckoutSuccessPage() {
   );
 }
 
+export default function CheckoutSuccessPage() {
+  return (
+    <Suspense fallback={
+      <Layout>
+        <div className="container mx-auto px-4 py-8 min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <Loader2 className="w-16 h-16 text-purple-600 mx-auto mb-4 animate-spin" />
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </Layout>
+    }>
+      <SuccessPageContent />
+    </Suspense>
+  );
+}
