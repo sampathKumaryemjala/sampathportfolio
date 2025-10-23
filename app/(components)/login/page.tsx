@@ -2,7 +2,6 @@
 
 import { Layout } from '@/app/reusableComponents/layout/Layout';
 import { Card } from '@/app/reusableComponents/ui/Card';
-import { Button } from '@/app/reusableComponents/ui/Button';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
@@ -23,7 +22,7 @@ export default function LoginPage() {
 
         try {
             await login(formData.email, formData.password);
-        } catch (error) {
+        } catch {
             setError('Invalid credentials. Please try again.');
         }
     };

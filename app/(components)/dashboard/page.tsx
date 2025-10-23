@@ -48,7 +48,7 @@ export default function DashboardPage() {
                                 Welcome back, {session?.user?.name || 'User'}!
                             </h1>
                             <p className="text-lg sm:text-xl text-gray-600">
-                                Here's your dashboard overview
+                                Here&apos;s your dashboard overview
                             </p>
                         </div>
 

@@ -25,7 +25,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                 <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12 sm:py-16 lg:py-20">
                     <div className="container mx-auto px-4 sm:px-6 text-center">
                         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-                        <p className="text-lg text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+                        <p className="text-lg text-gray-600 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
                         <Link
                             href="/blog"
                             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"

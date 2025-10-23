@@ -44,8 +44,8 @@ export const db = {
       console.warn('Client-side db.users.add - use API route instead')
       return user as User
     },
-    where: (field: keyof User) => ({
-      equals: (value: any) => ({
+    where: () => ({
+      equals: () => ({
         first: async () => {
           console.warn('Client-side db.users.where - use API route instead')
           return null
@@ -62,8 +62,8 @@ export const db = {
       console.warn('Client-side db.posts.add - use API route instead')
       return post as Post
     },
-    where: (field: keyof Post) => ({
-      equals: (value: any) => ({
+    where: () => ({
+      equals: () => ({
         first: async () => {
           console.warn('Client-side db.posts.where - use API route instead')
           return null

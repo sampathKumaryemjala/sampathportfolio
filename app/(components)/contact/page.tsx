@@ -68,33 +68,6 @@ export default function ContactPage() {
         },
     ];
 
-    const socialLinks = [
-        {
-            name: 'GitHub',
-            icon: '💻',
-            url: 'https://github.com',
-            color: 'from-gray-700 to-gray-900',
-        },
-        {
-            name: 'LinkedIn',
-            icon: '💼',
-            url: 'https://linkedin.com',
-            color: 'from-blue-600 to-blue-800',
-        },
-        {
-            name: 'Twitter',
-            icon: '🐦',
-            url: 'https://twitter.com',
-            color: 'from-sky-400 to-blue-600',
-        },
-        {
-            name: 'Instagram',
-            icon: '📸',
-            url: 'https://instagram.com',
-            color: 'from-purple-600 to-pink-600',
-        },
-    ];
-
     return (
         <Layout>
             <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 sm:py-16 lg:py-20">

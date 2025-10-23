@@ -36,8 +36,8 @@ export default function SignupPage() {
             }
 
             await register(formData.fullName, formData.email, formData.password);
-        } catch (error: any) {
-            setError(error.message || 'An error occurred. Please try again.');
+        } catch (error) {
+            setError(error instanceof Error ? error.message : 'An error occurred. Please try again.');
         }
     };
 
