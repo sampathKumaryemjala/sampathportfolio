@@ -49,6 +49,7 @@ export const authOptions: NextAuthOptions = {
 
           if (!isPasswordValid) {
             console.log('❌ Invalid password')
+            console.log('❌ Invalid password')
             return null
           }
 
