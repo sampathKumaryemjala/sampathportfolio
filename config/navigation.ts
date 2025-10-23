@@ -25,6 +25,7 @@ export const navigationConfig: NavItem[] = [
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: '/shop', label: 'Shop' },
   { href: '/labs', label: 'Labs' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -138,6 +139,12 @@ export const labsItems: NavLink[] = [
     label: 'Food app',
     description: 'Order food app',
     icon: '😋'
+  },
+  {
+    href: '/shop',
+    label: 'E-Commerce Shop',
+    description: 'Full-featured online store with Stripe',
+    icon: '🛍️'
   },
   // 🚀 Add more project ideas here as you build them:
   // Uncomment and modify these templates, or create your own!
