@@ -3,6 +3,7 @@
 import { useWishlist } from '@/app/providers/WishlistProvider';
 import { useCart } from '@/app/providers/CartProvider';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Heart, ShoppingCart, Trash2, ArrowRight } from 'lucide-react';
 import { Layout } from '@/app/reusableComponents/layout/Layout';
 
@@ -64,9 +65,11 @@ export default function WishlistPage() {
             >
               <Link href={`/shop/${item.product.id}`}>
                 <div className="relative aspect-square overflow-hidden group">
-                  <img
+                  <Image
                     src={item.product.image}
                     alt={item.product.name}
+                    width={400}
+                    height={400}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   {item.product.stock === 0 && (

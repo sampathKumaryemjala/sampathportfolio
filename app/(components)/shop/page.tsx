@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Product } from '@/types';
 import { useCart } from '@/app/providers/CartProvider';
 import { useWishlist } from '@/app/providers/WishlistProvider';
@@ -171,9 +172,11 @@ export default function ShopPage() {
               >
                 <Link href={`/shop/${product.id}`}>
                   <div className="relative aspect-square overflow-hidden">
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.name}
+                      width={400}
+                      height={400}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     {product.stock < 10 && (

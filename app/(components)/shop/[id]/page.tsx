@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Product } from '@/types';
 import { useCart } from '@/app/providers/CartProvider';
 import { useWishlist } from '@/app/providers/WishlistProvider';
@@ -118,9 +119,11 @@ export default function ProductDetailPage() {
           {/* Product Image */}
           <div className="relative">
             <div className="aspect-square rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={600}
+                height={600}
                 className="w-full h-full object-cover"
               />
             </div>

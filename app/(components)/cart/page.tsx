@@ -2,6 +2,7 @@
 
 import { useCart } from '@/app/providers/CartProvider';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from 'lucide-react';
 import { Layout } from '@/app/reusableComponents/layout/Layout';
 
@@ -54,9 +55,11 @@ export default function CartPage() {
                   href={`/shop/${item.product.id}`}
                   className="flex-shrink-0"
                 >
-                  <img
+                  <Image
                     src={item.product.image}
                     alt={item.product.name}
+                    width={128}
+                    height={128}
                     className="w-32 h-32 object-cover rounded-lg hover:opacity-80 transition-opacity"
                   />
                 </Link>

@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Next.js 15",
+    "excerpt": "Learn how to build modern web applications with Next.js 15, featuring App Router, Server Components, and more.",
+    "content": "Next.js 15 brings exciting new features to help you build faster, more efficient web applications. The App Router revolutionizes how we structure our applications, while Server Components provide better performance by default.\n\nIn this comprehensive guide, we'll explore:\n\n1. **App Router Fundamentals**\nThe new App Router in Next.js 15 uses a file-system based routing approach that makes it easier to organize your application. Every folder in the app directory becomes a route, and special files like page.tsx, layout.tsx, and loading.tsx have specific purposes.\n\n2. **Server Components**\nBy default, all components in the App Router are Server Components. This means they render on the server, reducing the JavaScript bundle size sent to the client. You can still use Client Components when needed by adding the 'use client' directive.\n\n3. **Data Fetching**\nNext.js 15 makes data fetching simple with async Server Components. You can fetch data directly in your components without the need for useEffect or useState.\n\n4. **Streaming and Suspense**\nTake advantage of React's Suspense to stream content to users as it becomes ready, providing a better user experience.\n\nStart building with Next.js 15 today and experience the future of web development!",
+    "author": "Sampath Kumar",
+    "date": "2024-01-15",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
+    "category": "Tutorial",
+    "tags": ["nextjs", "react", "web-development"],
+    "readTime": "8 min read"
+  },
+  {
+    "id": 2,
+    "title": "TypeScript Best Practices for 2024",
+    "excerpt": "Discover the essential TypeScript patterns and practices that will make your code more maintainable and type-safe.",
+    "content": "TypeScript has become the de facto standard for building scalable JavaScript applications. Here are the best practices you should follow in 2024:\n\n**1. Use Strict Mode**\nAlways enable strict mode in your tsconfig.json. This catches potential bugs early and forces you to write more explicit code.\n\n**2. Leverage Type Inference**\nLet TypeScript infer types when possible, but be explicit when it improves readability or catches errors.\n\n**3. Avoid 'any'**\nThe 'any' type defeats the purpose of TypeScript. Use 'unknown' when you truly don't know the type, and use type guards to narrow it down.\n\n**4. Use Union Types and Discriminated Unions**\nThese powerful features help you model complex data structures accurately.\n\n**5. Interface vs Type**\nUse interfaces for object shapes that might be extended, and types for unions, intersections, and mapped types.\n\n**6. Generics for Reusability**\nGenerics make your code more reusable while maintaining type safety.\n\n**7. Utility Types**\nMaster built-in utility types like Partial, Pick, Omit, and Record to transform types efficiently.\n\nBy following these practices, you'll write TypeScript code that's not only type-safe but also maintainable and elegant.",
+    "author": "Sampath Kumar",
+    "date": "2024-01-10",
+    "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80",
+    "category": "Best Practices",
+    "tags": ["typescript", "javascript", "programming"],
+    "readTime": "6 min read"
+  },
+  {
+    "id": 3,
+    "title": "Building Responsive UIs with Tailwind CSS",
+    "excerpt": "Master the art of creating beautiful, responsive user interfaces using Tailwind CSS utility classes.",
+    "content": "Tailwind CSS has transformed how we approach styling in modern web development. Here's how to leverage its power for building responsive UIs:\n\n**Mobile-First Approach**\nTailwind encourages a mobile-first methodology. Start with mobile styles and use breakpoint prefixes (sm:, md:, lg:, xl:, 2xl:) to add styles for larger screens.\n\n**Flexbox and Grid**\nTailwind makes layout systems incredibly easy:\n- Use flex, flex-col, justify-center, items-center for flexbox layouts\n- Use grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-3 for grid layouts\n\n**Spacing System**\nThe spacing scale (from 0 to 96) provides consistent spacing throughout your application. Use padding (p-4), margin (m-2), and gap (gap-6) utilities.\n\n**Dark Mode**\nImplementing dark mode is as simple as adding the dark: prefix to your utilities.\n\n**Custom Configuration**\nExtend Tailwind's default theme in tailwind.config.js to match your brand colors, fonts, and spacing.\n\n**Component Patterns**\nWhile Tailwind is utility-first, you can extract common patterns into reusable components to avoid repetition.\n\n**Performance**\nTailwind's JIT (Just-In-Time) compiler generates only the CSS you actually use, keeping your bundle size minimal.\n\nWith Tailwind CSS, you can build stunning, responsive interfaces faster than ever before!",
+    "author": "Sampath Kumar",
+    "date": "2024-01-05",
+    "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&q=80",
+    "category": "Design",
+    "tags": ["tailwind", "css", "ui-design"],
+    "readTime": "7 min read"
+  },
+  {
+    "id": 4,
+    "title": "Authentication in Next.js with NextAuth",
+    "excerpt": "Implement secure authentication in your Next.js applications using NextAuth.js with multiple providers.",
+    "content": "Authentication is a critical part of most web applications. NextAuth.js makes it easy to implement secure authentication in Next.js:\n\n**Why NextAuth?**\n- Easy to use and configure\n- Supports multiple authentication providers\n- Built-in security features\n- Works seamlessly with Next.js\n\n**Setting Up NextAuth**\n1. Install the package: npm install next-auth\n2. Create an API route at app/api/auth/[...nextauth]/route.ts\n3. Configure your authentication providers\n4. Add session handling\n\n**Supported Providers**\n- OAuth providers (Google, GitHub, Facebook, etc.)\n- Email/password authentication\n- Magic link authentication\n- Custom credentials\n\n**Session Management**\nNextAuth supports both JWT and database sessions. JWT sessions are stateless and work well for serverless deployments.\n\n**Protecting Routes**\nUse middleware to protect routes that require authentication, redirecting unauthorized users to the login page.\n\n**Client-Side Usage**\nUse the useSession hook to access user data in client components.\n\n**Server-Side Usage**\nUse getServerSession in Server Components and API routes for server-side authentication checks.\n\n**Best Practices**\n- Always use HTTPS in production\n- Set a strong NEXTAUTH_SECRET\n- Implement proper error handling\n- Use secure cookie settings\n\nWith NextAuth, you can implement enterprise-grade authentication in minutes!",
+    "author": "Sampath Kumar",
+    "date": "2023-12-28",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
+    "category": "Security",
+    "tags": ["authentication", "nextauth", "security"],
+    "readTime": "10 min read"
+  },
+  {
+    "id": 5,
+    "title": "React Server Components: A Deep Dive",
+    "excerpt": "Understand React Server Components and how they're changing the way we build React applications.",
+    "content": "React Server Components (RSC) represent a fundamental shift in how we build React applications. Let's dive deep into this revolutionary feature:\n\n**What are Server Components?**\nServer Components render exclusively on the server and never hydrate on the client. They can directly access backend resources like databases and file systems.\n\n**Key Benefits**\n1. **Zero Bundle Size**: Server Components don't add to your JavaScript bundle\n2. **Direct Backend Access**: Query databases without API routes\n3. **Automatic Code Splitting**: Only client components are bundled\n4. **Better Performance**: Less JavaScript means faster initial page loads\n\n**Server vs Client Components**\n- Server Components: Default in Next.js App Router, async, can't use hooks or browser APIs\n- Client Components: Marked with 'use client', can use hooks, handle interactivity\n\n**When to Use Each**\nUse Server Components for:\n- Fetching data\n- Accessing backend resources\n- Keeping sensitive data on the server\n- Large dependencies that would increase bundle size\n\nUse Client Components for:\n- Interactivity (onClick, onChange)\n- State management (useState, useReducer)\n- Browser APIs\n- Custom hooks\n\n**Composition Patterns**\nYou can compose Server and Client Components together, but follow these rules:\n- Server Components can import Client Components\n- Client Components can't import Server Components (but can accept them as props)\n\n**Data Fetching**\nServer Components support async/await natively, making data fetching straightforward.\n\nReact Server Components are the future of React development, offering better performance and developer experience!",
+    "author": "Sampath Kumar",
+    "date": "2023-12-20",
+    "image": "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&q=80",
+    "category": "Tutorial",
+    "tags": ["react", "server-components", "performance"],
+    "readTime": "12 min read"
+  },
+  {
+    "id": 6,
+    "title": "State Management in Modern React",
+    "excerpt": "Explore different state management solutions and learn when to use each approach in your React applications.",
+    "content": "State management is crucial for building scalable React applications. Let's explore the modern approaches:\n\n**1. Local State (useState)**\nPerfect for component-specific state that doesn't need to be shared.\n\n**2. Context API**\nGreat for sharing state across the component tree without prop drilling. Use it for:\n- Theme preferences\n- User authentication\n- Language/localization\n\n**3. URL State**\nStore state in the URL for:\n- Search filters\n- Pagination\n- Selected tabs\nBenefits: Shareable, bookmarkable, back-button friendly\n\n**4. Server State**\nUse libraries like React Query or SWR for:\n- Caching server data\n- Background refetching\n- Optimistic updates\n\n**5. Zustand**\nA lightweight state management library that's:\n- Simple to use\n- No boilerplate\n- Great TypeScript support\n- Small bundle size\n\n**6. Redux Toolkit**\nStill relevant for:\n- Large applications\n- Complex state logic\n- Time-travel debugging\n- Extensive middleware needs\n\n**Choosing the Right Tool**\n- Start with the simplest solution (useState)\n- Use Context for truly global state\n- Consider server state libraries for API data\n- Only reach for Redux when you need its power\n\n**Best Practices**\n- Keep state as close to where it's used as possible\n- Avoid over-centralizing state\n- Use derived state instead of duplicating\n- Consider performance implications\n\nThe key is choosing the right tool for your specific needs!",
+    "author": "Sampath Kumar",
+    "date": "2023-12-15",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
+    "category": "Best Practices",
+    "tags": ["react", "state-management", "architecture"],
+    "readTime": "9 min read"
+  }
+]
+
