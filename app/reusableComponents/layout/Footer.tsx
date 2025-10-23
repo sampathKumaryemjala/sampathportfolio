@@ -55,8 +55,24 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-400">
-                    <p className="text-sm sm:text-base">© 2025 Sampath Kumar. All rights reserved.</p>
+                <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <p className="text-sm sm:text-base text-gray-400">© 2025 Sampath Kumar. All rights reserved.</p>
+                        <div className="flex gap-4 sm:gap-6">
+                            <Link 
+                                href="/privacy" 
+                                className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors"
+                            >
+                                Privacy Policy
+                            </Link>
+                            <Link 
+                                href="/terms" 
+                                className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors"
+                            >
+                                Terms of Service
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
