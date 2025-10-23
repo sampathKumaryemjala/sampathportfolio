@@ -32,6 +32,9 @@ export default function Home() {
             <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Blog
             </Link>
+            <Link href="/labs" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+              Labs
+            </Link>
             <Link href="/portfolio" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Portfolio
             </Link>
