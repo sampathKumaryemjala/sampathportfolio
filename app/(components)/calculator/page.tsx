@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Layout } from '@/app/reusableComponents/layout/Layout';
+import { BackButton } from '@/app/reusableComponents/ui';
 
 // Types
 interface HistoryItem {
@@ -266,21 +268,27 @@ export default function CalculatorPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-5xl font-bold text-white mb-3">
-            Calculator
-          </h1>
-          <p className="text-gray-300">
-            Keyboard supported • Press Esc to clear
-          </p>
-        </motion.div>
+    <Layout>
+      <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Back Button */}
+          <div className="mb-6">
+            <BackButton />
+          </div>
+
+          {/* Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-8"
+          >
+            <h1 className="text-5xl font-bold text-white mb-3">
+              Calculator
+            </h1>
+            <p className="text-gray-300">
+              Keyboard supported • Press Esc to clear
+            </p>
+          </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Calculator */}
@@ -443,7 +451,8 @@ export default function CalculatorPage() {
           background: rgba(255, 255, 255, 0.3);
         }
       `}</style>
-    </div>
+    </section>
+    </Layout>
   );
 }
 
