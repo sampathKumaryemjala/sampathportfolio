@@ -133,6 +133,12 @@ export const labsItems: NavLink[] = [
     description: 'Real-time API monitoring',
     icon: '🚦'
   },
+  {
+    href: 'https://foood-app-lac.vercel.app/',
+    label: 'Food app',
+    description: 'Order food app',
+    icon: '😋'
+  },
   // 🚀 Add more project ideas here as you build them:
   // Uncomment and modify these templates, or create your own!
   
