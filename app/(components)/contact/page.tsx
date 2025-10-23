@@ -19,17 +19,25 @@ export default function ContactPage() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            // Simulate form submission (no server database)
+            console.log('Contact form submission:', formData);
+            
+            // Simulate network delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
 
-        setIsSubmitting(false);
-        setSubmitted(true);
+            setIsSubmitting(false);
+            setSubmitted(true);
 
-        // Reset form
-        setFormData({ name: '', email: '', subject: '', message: '' });
+            // Reset form
+            setFormData({ name: '', email: '', subject: '', message: '' });
 
-        // Reset success message after 5 seconds
-        setTimeout(() => setSubmitted(false), 5000);
+            // Reset success message after 5 seconds
+            setTimeout(() => setSubmitted(false), 5000);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,14 +51,14 @@ export default function ContactPage() {
         {
             icon: '📧',
             title: 'Email',
-            value: 'sampath@gmail.com.com',
-            link: 'mailto:sampath@gmail.com.com',
+            value: 'sampathyemjala@gmail.com',
+            link: 'mailto:sampathyemjala@gmail.com',
         },
         {
             icon: '📱',
             title: 'Phone',
-            value: '+91 98765 43210',
-            link: 'tel:+919876543210',
+            value: '+91 7729827183',
+            link: 'tel:+917729827183',
         },
         {
             icon: '📍',
@@ -60,54 +68,24 @@ export default function ContactPage() {
         },
     ];
 
-    const socialLinks = [
-        {
-            name: 'GitHub',
-            icon: '💻',
-            url: 'https://github.com',
-            color: 'from-gray-700 to-gray-900',
-        },
-        {
-            name: 'LinkedIn',
-            icon: '💼',
-            url: 'https://linkedin.com',
-            color: 'from-blue-600 to-blue-800',
-        },
-        {
-            name: 'Twitter',
-            icon: '🐦',
-            url: 'https://twitter.com',
-            color: 'from-sky-400 to-blue-600',
-        },
-        {
-            name: 'Instagram',
-            icon: '📸',
-            url: 'https://instagram.com',
-            color: 'from-purple-600 to-pink-600',
-        },
-    ];
-
     return (
         <Layout>
-           
-            <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
-                <div className="container mx-auto px-6 text-center">
-                    <h1 className="text-6xl font-bold mb-6">Get In Touch</h1>
-                    <p className="text-2xl text-purple-200 max-w-3xl mx-auto">
+            <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 sm:py-16 lg:py-20">
+                <div className="container mx-auto px-4 sm:px-6 text-center">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">Get In Touch</h1>
+                    <p className="text-lg sm:text-xl lg:text-2xl text-purple-200 max-w-3xl mx-auto">
                         Have a question or want to work together? I would love to hear from you!
                     </p>
                 </div>
             </section>
 
-           
-            <section className="py-20 bg-gray-50">
-                <div>
-                <div className="container mx-auto px-6">
-                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12">
                        
                         <Card>
-                            <div className="p-8">
-                                <h2 className="text-3xl font-bold mb-6">Send a Message</h2>
+                            <div className="p-4 sm:p-6 lg:p-8">
+                                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Send a Message</h2>
 
                                 {submitted && (
                                     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
@@ -227,20 +205,18 @@ export default function ContactPage() {
                         </Card>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-8">Find Me Here</h2>
-                <div className="bg-gray-200 rounded-2xl overflow-hidden h-96 flex items-center justify-center">
-                    <p className="text-gray-600 text-lg">📍 Hyderabad, Telangana, India</p>
+            <section className="py-12 sm:py-16 lg:py-20 bg-white">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Find Me Here</h2>
+                        <div className="bg-gray-200 rounded-xl lg:rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+                            <p className="text-gray-600 text-base sm:text-lg">📍 Hyderabad, Telangana, India</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-   
-        </Layout >
+            </section>
+        </Layout>
     );
 }

@@ -4,8 +4,10 @@ import { Layout } from '@/app/reusableComponents/layout/Layout';
 import { Card } from '@/app/reusableComponents/ui/Card';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 
 export default function SignupPage() {
+    const { register, isLoading } = useAuth();
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -15,35 +17,28 @@ export default function SignupPage() {
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
         setError('');
 
-        // Validation
-        if (formData.password !== formData.confirmPassword) {
-            setError('Passwords do not match');
-            setIsLoading(false);
-            return;
+        try {
+            // Validation
+            if (formData.password !== formData.confirmPassword) {
+                setError('Passwords do not match');
+                return;
+            }
+
+            if (formData.password.length < 8) {
+                setError('Password must be at least 8 characters');
+                return;
+            }
+
+            await register(formData.fullName, formData.email, formData.password);
+        } catch (error) {
+            setError(error instanceof Error ? error.message : 'An error occurred. Please try again.');
         }
-
-        if (formData.password.length < 8) {
-            setError('Password must be at least 8 characters');
-            setIsLoading(false);
-            return;
-        }
-
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        console.log('Signup successful:', formData);
-        // Redirect to login or dashboard
-        window.location.href = '/login';
-
-        setIsLoading(false);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,12 +50,12 @@ export default function SignupPage() {
 
     return (
         <Layout>
-            <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 py-20">
-                <div className="container mx-auto px-6">
+            <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 py-12 sm:py-20">
+                <div className="container mx-auto px-4 sm:px-6">
                     <div className="max-w-md mx-auto">
-                        <div className="text-center mb-8">
-                            <h1 className="text-4xl font-bold text-gray-900 mb-2">Create Account</h1>
-                            <p className="text-gray-600">Sign up to get started with your journey</p>
+                        <div className="text-center mb-6 sm:mb-8">
+                            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Create Account</h1>
+                            <p className="text-sm sm:text-base text-gray-600">Sign up to get started with your journey</p>
                         </div>
 
                         <Card>

@@ -49,38 +49,38 @@ export default function AboutPage() {
 
     return (
         <Layout>
-            <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white py-20">
-                <div className="container mx-auto px-6">
+            <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white py-12 sm:py-16 lg:py-20">
+                <div className="container mx-auto px-4 sm:px-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-6xl font-bold mb-6">About Me</h1>
-                        <p className="text-2xl text-purple-100">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">About Me</h1>
+                        <p className="text-lg sm:text-xl lg:text-2xl text-purple-100">
                             Full-Stack Developer passionate about building amazing web experiences
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <section className="py-12 sm:py-16 lg:py-20 bg-white">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
                         {stats.map((stat, index) => (
                             <div key={index} className="text-center">
-                                <div className="text-5xl font-bold text-purple-600 mb-2">
+                                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-600 mb-2">
                                     {stat.number}
                                 </div>
-                                <div className="text-gray-600 text-lg">{stat.label}</div>
+                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg">{stat.label}</div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                         <div>
-                            <h2 className="text-4xl font-bold mb-6">Hi, I am Sampath Kumar</h2>
-                            <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Hi, I am Sampath Kumar</h2>
+                            <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
                                 <p>
                                     I am a passionate Full-Stack Developer based in Hyderabad, India, with over 5 years of experience building web applications that make a difference.
                                 </p>
@@ -96,9 +96,12 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                        <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl lg:rounded-2xl overflow-hidden shadow-2xl">
+                            {/* Using GitHub profile image. To use a local image: 
+                                1. Place your image in /public folder (e.g., /public/profile.jpg)
+                                2. Update src to: src="/profile.jpg" */}
                             <Image
-                                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&q=80"
+                                src="https://github.com/sampathKumaryemjala.png"
                                 alt="Sampath Kumar"
                                 fill
                                 className="object-cover"
