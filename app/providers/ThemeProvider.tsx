@@ -76,6 +76,31 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         } catch (e) {
             console.error('Failed to save theme to localStorage:', e);
         }
+        
+        // Apply theme immediately
+        const root = window.document.documentElement;
+        if (newTheme === 'system') {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                root.classList.add('dark');
+                root.classList.remove('light');
+            } else {
+                root.classList.remove('dark');
+                root.classList.add('light');
+            }
+            setResolvedTheme(isDark ? 'dark' : 'light');
+        } else {
+            const isDark = newTheme === 'dark';
+            if (isDark) {
+                root.classList.add('dark');
+                root.classList.remove('light');
+            } else {
+                root.classList.remove('dark');
+                root.classList.add('light');
+            }
+            setResolvedTheme(isDark ? 'dark' : 'light');
+        }
+        
         setThemeState(newTheme);
     };
 

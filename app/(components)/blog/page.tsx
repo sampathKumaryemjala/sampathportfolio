@@ -9,10 +9,10 @@ export default function BlogPage() {
 
     return (
         <Layout>
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 py-12 sm:py-16 lg:py-20 min-h-screen">
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-12 sm:py-16 lg:py-20 min-h-screen">
                 <div className="container mx-auto px-4 sm:px-6">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">Blog</h1>
-                    <p className="text-lg sm:text-xl text-gray-600 text-center mb-8 sm:mb-12">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 dark:text-white">Blog</h1>
+                    <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 text-center mb-8 sm:mb-12">
                         Thoughts, tutorials, and insights on web development
                     </p>
 
