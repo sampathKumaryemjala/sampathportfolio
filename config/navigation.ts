@@ -36,6 +36,18 @@ export const navigationConfig: NavItem[] = [
         description: 'Create, read, update, and delete records',
         icon: '📝'
       },
+      {
+        href: '/tic-tac-toe',
+        label: 'Tic-Tac-Toe',
+        description: 'Play classic game with AI opponent',
+        icon: '⭕'
+      },
+      {
+        href: '/calculator',
+        label: 'Calculator',
+        description: 'Advanced calculator with history',
+        icon: '🧮'
+      },
       // 🚀 Add more project ideas here as you build them:
       // Uncomment and modify these templates, or create your own!
       
@@ -50,12 +62,6 @@ export const navigationConfig: NavItem[] = [
       //   label: 'Notes App',
       //   description: 'Take quick notes and organize ideas',
       //   icon: '📔'
-      // },
-      // {
-      //   href: '/calculator',
-      //   label: 'Calculator',
-      //   description: 'Perform quick calculations',
-      //   icon: '🧮'
       // },
       // {
       //   href: '/weather',
